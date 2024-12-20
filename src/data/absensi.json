@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "nama": "Andi Wijaya",
+    "tanggal": "2024-12-01",
+    "status": "Hadir",
+    "jamMasuk": "08:00",
+    "jamKeluar": "16:00"
+  },
+  {
+    "id": 2,
+    "nama": "Budi Santoso",
+    "tanggal": "2024-12-01",
+    "status": "Izin",
+    "jamMasuk": "-",
+    "jamKeluar": "-"
+  },
+  {
+    "id": 3,
+    "nama": "Citra Dewi",
+    "tanggal": "2024-12-01",
+    "status": "Hadir",
+    "jamMasuk": "08:15",
+    "jamKeluar": "16:15"
+  },
+  {
+    "id": 4,
+    "nama": "Diana Putri",
+    "tanggal": "2024-12-01",
+    "status": "Sakit",
+    "jamMasuk": "-",
+    "jamKeluar": "-"
+  },
+  {
+    "id": 5,
+    "nama": "Eko Prasetyo",
+    "tanggal": "2024-12-01",
+    "status": "Hadir",
+    "jamMasuk": "08:10",
+    "jamKeluar": "16:00"
+  },
+  {
+    "id": 6,
+    "nama": "Fani Rahma",
+    "tanggal": "2024-12-01",
+    "status": "Hadir",
+    "jamMasuk": "08:00",
+    "jamKeluar": "15:55"
+  },
+  {
+    "id": 7,
+    "nama": "Gilang Saputra",
+    "tanggal": "2024-12-01",
+    "status": "Hadir",
+    "jamMasuk": "08:05",
+    "jamKeluar": "16:10"
+  },
+  {
+    "id": 8,
+    "nama": "Hani Setiawan",
+    "tanggal": "2024-12-01",
+    "status": "Hadir",
+    "jamMasuk": "07:50",
+    "jamKeluar": "16:00"
+  },
+  {
+    "id": 9,
+    "nama": "Irwan Hidayat",
+    "tanggal": "2024-12-01",
+    "status": "Izin",
+    "jamMasuk": "-",
+    "jamKeluar": "-"
+  },
+  {
+    "id": 10,
+    "nama": "Joko Purnomo",
+    "tanggal": "2024-12-01",
+    "status": "Hadir",
+    "jamMasuk": "08:00",
+    "jamKeluar": "16:00"
+  },
+  {
+    "id": 11,
+    "nama": "Alvindra Ramadhan",
+    "tanggal": "2024-12-01",
+    "status": "Hadir",
+    "jamMasuk": "08:00",
+    "jamKeluar": "16:00"
+  }
+]

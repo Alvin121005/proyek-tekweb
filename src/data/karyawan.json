@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "nama": "Andi Wijaya",
+    "jabatan": "Manager",
+    "email": "andi.wijaya@example.com",
+    "telepon": "08123456789"
+  },
+  {
+    "id": 2,
+    "nama": "Budi Santoso",
+    "jabatan": "Staff",
+    "email": "budi.santoso@example.com",
+    "telepon": "08234567890"
+  },
+  {
+    "id": 3,
+    "nama": "Citra Dewi",
+    "jabatan": "HRD",
+    "email": "citra.dewi@example.com",
+    "telepon": "08345678901"
+  },
+  {
+    "id": 4,
+    "nama": "Diana Putri",
+    "jabatan": "Finance",
+    "email": "diana.putri@example.com",
+    "telepon": "08456789012"
+  },
+  {
+    "id": 5,
+    "nama": "Eko Prasetyo",
+    "jabatan": "IT Support",
+    "email": "eko.prasetyo@example.com",
+    "telepon": "08567890123"
+  },
+  {
+    "id": 6,
+    "nama": "Fani Rahma",
+    "jabatan": "Marketing",
+    "email": "fani.rahma@example.com",
+    "telepon": "08678901234"
+  },
+  {
+    "id": 7,
+    "nama": "Gilang Saputra",
+    "jabatan": "Security",
+    "email": "gilang.saputra@example.com",
+    "telepon": "08789012345"
+  },
+  {
+    "id": 8,
+    "nama": "Hani Setiawan",
+    "jabatan": "Admin",
+    "email": "hani.setiawan@example.com",
+    "telepon": "08890123456"
+  },
+  {
+    "id": 9,
+    "nama": "Irwan Hidayat",
+    "jabatan": "Staff",
+    "email": "irwan.hidayat@example.com",
+    "telepon": "08901234567"
+  },
+  {
+    "id": 10,
+    "nama": "Joko Purnomo",
+    "jabatan": "Manager",
+    "email": "joko.purnomo@example.com",
+    "telepon": "08109876543"
+  },
+  {
+    "id": 11,
+    "nama": "Alvindra Ramadhan",
+    "jabatan": "CEO",
+    "email": "alvin.ceo@example.com",
+    "telepon": "08109871231"
+  }
+]

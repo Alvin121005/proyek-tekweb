@@ -1,10 +1,16 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
+  const navigate = useNavigate();
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleNavigation = (path) => {
+    navigate(path);
   };
 
   return (
@@ -15,6 +21,7 @@ function Sidebar() {
         } bg-gradient-to-b from-blue-900 to-blue-700 text-white h-full transition-all duration-300 flex flex-col justify-between`}
       >
         <div>
+          {/* Tombol toggle sidebar */}
           <button
             className="p-2 focus:outline-none text-white flex items-center justify-center"
             onClick={toggleSidebar}
@@ -25,6 +32,8 @@ function Sidebar() {
               className="w-6 h-6"
             />
           </button>
+
+          {/* Logo / Judul */}
           <div
             className={`${
               isOpen ? "block" : "hidden"
@@ -32,8 +41,13 @@ function Sidebar() {
           >
             SIKaryawan
           </div>
+
+          {/* Menu Navigasi */}
           <ul className="mt-6 space-y-2">
-            <li className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer">
+            <li
+              className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer"
+              onClick={() => handleNavigation("/")}
+            >
               <img
                 src="https://img.icons8.com/ios-filled/50/home--v1.png"
                 alt="Home Icon"
@@ -41,7 +55,10 @@ function Sidebar() {
               />
               {isOpen && <span>Beranda</span>}
             </li>
-            <li className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer">
+            <li
+              className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer"
+              onClick={() => handleNavigation("/data-karyawan")}
+            >
               <img
                 src="https://img.icons8.com/ios-filled/50/workers-male.png"
                 alt="Employee Icon"
@@ -49,7 +66,10 @@ function Sidebar() {
               />
               {isOpen && <span>Data Karyawan</span>}
             </li>
-            <li className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer">
+            <li
+              className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer"
+              onClick={() => handleNavigation("/data-absensi")}
+            >
               <img
                 src="https://img.icons8.com/ios-filled/50/calendar.png"
                 alt="Attendance Icon"
@@ -57,15 +77,10 @@ function Sidebar() {
               />
               {isOpen && <span>Data Absensi</span>}
             </li>
-            <li className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer">
-              <img
-                src="https://img.icons8.com/ios-filled/50/task.png"
-                alt="Position Icon"
-                className="w-6 h-6 mr-3"
-              />
-              {isOpen && <span>Data Jabatan</span>}
-            </li>
-            <li className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer">
+            <li
+              className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer"
+              onClick={() => handleNavigation("/data-cuti")}
+            >
               <img
                 src="https://img.icons8.com/ios-filled/50/overtime.png"
                 alt="Leave Icon"
@@ -73,16 +88,21 @@ function Sidebar() {
               />
               {isOpen && <span>Data Cuti</span>}
             </li>
-            <li className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer">
+            <li
+              className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer"
+              onClick={() => handleNavigation("/data-gaji")}
+            >
               <img
-                src="https://img.icons8.com/?size=100&id=484&format=png&color=000000"
-                alt="Salary Icon"
+                src="https://img.icons8.com/?size=100&id=7977&format=png&color=000000"
+                alt="Payroll Icon"
                 className="w-6 h-6 mr-3"
               />
               {isOpen && <span>Data Gaji</span>}
             </li>
           </ul>
         </div>
+
+        {/* Menu Logout */}
         <div className="mb-4">
           <div className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer">
             <img
@@ -94,6 +114,8 @@ function Sidebar() {
           </div>
         </div>
       </div>
+
+      {/* Konten halaman */}
       <div className="flex-1 bg-gray-100">{/* Content goes here */}</div>
     </div>
   );

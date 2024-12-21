@@ -3,6 +3,7 @@ import dataKaryawan from "../data/karyawan.json";
 
 function DataKaryawan() {
   const [karyawan, setKaryawan] = useState([]);
+  const [search, setSearch] = useState("");
   const [form, setForm] = useState({
     id: null,
     nama: "",
@@ -19,6 +20,14 @@ function DataKaryawan() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
+  };
+
+  const handleSearchChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const handleSearchClick = () => {
+    console.log(`Mencari karyawan dengan kata kunci: ${search}`);
   };
 
   const handleAdd = () => {
@@ -51,9 +60,31 @@ function DataKaryawan() {
     setKaryawan(filteredKaryawan);
   };
 
+  const filteredKaryawan = karyawan.filter((item) =>
+    [item.nama, item.jabatan, item.email, item.telepon].some((field) =>
+      field.toLowerCase().includes(search.toLowerCase())
+    )
+  );
+
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Data Karyawan</h1>
+
+      <div className="mb-4 flex">
+        <input
+          type="text"
+          value={search}
+          onChange={handleSearchChange}
+          placeholder="Cari berdasarkan nama, jabatan, email, atau telepon..."
+          className="border p-2 rounded flex-1"
+        />
+        <button
+          onClick={handleSearchClick}
+          className="bg-blue-500 text-white px-4 py-2 rounded ml-2"
+        >
+          Cari
+        </button>
+      </div>
 
       <div className="mb-4">
         <input
@@ -117,7 +148,7 @@ function DataKaryawan() {
           </tr>
         </thead>
         <tbody>
-          {karyawan.map((item, index) => (
+          {filteredKaryawan.map((item, index) => (
             <tr key={item.id} className="hover:bg-gray-100">
               <td className="px-6 py-3">{index + 1}</td>
               <td className="px-6 py-3">{item.nama}</td>

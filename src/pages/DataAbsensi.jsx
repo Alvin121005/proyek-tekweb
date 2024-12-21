@@ -1,4 +1,3 @@
-// File: pages/DataAbsensi.jsx
 import React, { useEffect, useState } from "react";
 import absensiData from "../data/absensi.json";
 

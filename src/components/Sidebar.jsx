@@ -21,7 +21,6 @@ function Sidebar() {
         } bg-gradient-to-b from-blue-900 to-blue-700 text-white h-full transition-all duration-300 flex flex-col justify-between`}
       >
         <div>
-          {/* Tombol toggle sidebar */}
           <button
             className="p-2 focus:outline-none text-white flex items-center justify-center"
             onClick={toggleSidebar}
@@ -33,7 +32,6 @@ function Sidebar() {
             />
           </button>
 
-          {/* Logo / Judul */}
           <div
             className={`${
               isOpen ? "block" : "hidden"
@@ -42,7 +40,6 @@ function Sidebar() {
             SIKaryawan
           </div>
 
-          {/* Menu Navigasi */}
           <ul className="mt-6 space-y-2">
             <li
               className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer"
@@ -79,6 +76,17 @@ function Sidebar() {
             </li>
             <li
               className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer"
+              onClick={() => handleNavigation("/data-proyek")}
+            >
+              <img
+                src="https://img.icons8.com/?size=100&id=53428&format=png&color=000000"
+                alt="Project Icon"
+                className="w-6 h-6 mr-3"
+              />
+              {isOpen && <span>Proyek</span>}
+            </li>
+            <li
+              className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer"
               onClick={() => handleNavigation("/data-cuti")}
             >
               <img
@@ -102,7 +110,6 @@ function Sidebar() {
           </ul>
         </div>
 
-        {/* Menu Logout */}
         <div className="mb-4">
           <div className="flex items-center px-4 py-2 hover:bg-blue-600 cursor-pointer">
             <img
@@ -116,7 +123,7 @@ function Sidebar() {
       </div>
 
       {/* Konten halaman */}
-      <div className="flex-1 bg-gray-100">{/* Content goes here */}</div>
+      <div className="flex-1 bg-gray-100"></div>
     </div>
   );
 }

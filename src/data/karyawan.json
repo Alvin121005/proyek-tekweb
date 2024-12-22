@@ -75,5 +75,19 @@
     "jabatan": "CEO",
     "email": "alvin.ceo@example.com",
     "telepon": "08109871231"
+  },
+  {
+    "id": 12,
+    "nama": "Adam Bimantara",
+    "jabatan": "Staff",
+    "email": "adam.bi@example.com",
+    "telepon": "08209871232"
+  },
+  {
+    "id": 13,
+    "nama": "Bagus Kuncoro",
+    "jabatan": "Manager",
+    "email": "bagus.kuncoro@example.com",
+    "telepon": "08109871233"
   }
 ]

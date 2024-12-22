@@ -86,5 +86,21 @@
     "status": "Hadir",
     "jamMasuk": "08:00",
     "jamKeluar": "16:00"
+  },
+  {
+    "id": 12,
+    "nama": "Adam Bimantara",
+    "tanggal": "2024-12-01",
+    "status": "Terlambat",
+    "jamMasuk": "09:00",
+    "jamKeluar": "16:00"
+  },
+  {
+    "id": 13,
+    "nama": "Bagus Kuncoro",
+    "tanggal": "2024-12-01",
+    "status": "Tidak Hadir",
+    "jamMasuk": "-",
+    "jamKeluar": "-"
   }
 ]

@@ -34,8 +34,10 @@ function DataAbsensi() {
                 className={`px-6 py-3 ${
                   item.status === "Terlambat"
                     ? "text-yellow-500 font-semibold"
-                    : item.status === "Izin"
+                    : item.status === "Izin" || item.status === "Sakit"
                     ? "text-blue-500 font-semibold"
+                    : item.status === "Tidak Hadir"
+                    ? "text-red-500 font-semibold"
                     : "text-green-500 font-semibold"
                 }`}
               >

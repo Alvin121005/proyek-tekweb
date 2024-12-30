@@ -1,14 +1,18 @@
 import React from "react";
-import DashboardCard from "../components/DashboardCard";
+import DashboardCard from "../components/DashboardCard"; // Import komponen DashboardCard
 
 function Dashboard() {
   return (
     <div className="p-6 flex-1">
+      {" "}
+      {/* Kontainer utama dengan padding dan fleksibilitas */}
       <div className="bg-white shadow-md p-4 rounded-md">
-        <DashboardCard />
+        {" "}
+        {/* Card untuk dashboard dengan latar putih, bayangan, padding, dan sudut yang melengkung */}
+        <DashboardCard /> {/* Menampilkan komponen DashboardCard */}
       </div>
     </div>
   );
 }
 
-export default Dashboard;
+export default Dashboard; // Mengekspor komponen Dashboard untuk digunakan di bagian lain aplikasi

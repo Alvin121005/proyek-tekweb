@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "nama": "Andi Wijaya",
+    "keterangan": "Liburan ke Bali",
+    "tanggalCuti": "2024-12-20",
+    "akhirCuti": "2024-12-22",
+    "lamaCuti": 3,
+    "status": "Menunggu Konfirmasi"
+  },
+  {
+    "id": 2,
+    "nama": "Budi Santoso",
+    "keterangan": "Menghadiri Pernikahan",
+    "tanggalCuti": "2024-12-15",
+    "akhirCuti": "2024-12-16",
+    "lamaCuti": 2,
+    "status": "Ditolak"
+  },
+  {
+    "id": 3,
+    "nama": "Citra Dewi",
+    "keterangan": "Cuti Melahirkan",
+    "tanggalCuti": "2024-12-10",
+    "akhirCuti": "2024-12-24",
+    "lamaCuti": 15,
+    "status": "Diterima"
+  },
+  {
+    "id": 4,
+    "nama": "Diana Putri",
+    "keterangan": "Liburan ke Lombok",
+    "tanggalCuti": "2024-12-25",
+    "akhirCuti": "2024-12-27",
+    "lamaCuti": 3,
+    "status": "Menunggu Konfirmasi"
+  },
+  {
+    "id": 5,
+    "nama": "Eko Prasetyo",
+    "keterangan": "Acara Keluarga",
+    "tanggalCuti": "2024-12-18",
+    "akhirCuti": "2024-12-19",
+    "lamaCuti": 2,
+    "status": "Diterima"
+  }
+]

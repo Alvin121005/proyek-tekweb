@@ -2,43 +2,53 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function DashboardCard() {
+  // State untuk mengontrol tampilan dropdown
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  // State untuk mengontrol konfirmasi logout
   const [showLogoutConfirmation, setShowLogoutConfirmation] = useState(false);
+  // Hook untuk navigasi ke halaman lain
   const navigate = useNavigate();
 
+  // Fungsi untuk menangani klik pada profil dan membuka/menutup dropdown
   const handleProfileClick = () => {
-    setDropdownOpen(!dropdownOpen);
+    setDropdownOpen(!dropdownOpen); // Toggle dropdown
   };
 
+  // Fungsi untuk navigasi ke halaman pengaturan
   const handleSettingsClick = () => {
-    navigate("/settings");
+    navigate("/settings"); // Navigasi ke halaman settings
   };
 
+  // Fungsi untuk menampilkan konfirmasi logout
   const handleLogoutClick = () => {
-    setShowLogoutConfirmation(true);
+    setShowLogoutConfirmation(true); // Tampilkan dialog konfirmasi
   };
 
+  // Fungsi untuk menangani konfirmasi logout
   const handleLogoutConfirmation = (confirm) => {
     if (confirm) {
-      localStorage.setItem("isAuthenticated", "false");
-      navigate("/");
+      localStorage.setItem("isAuthenticated", "false"); // Set status autentikasi ke false
+      navigate("/"); // Kembali ke halaman utama
     }
-    setShowLogoutConfirmation(false);
+    setShowLogoutConfirmation(false); // Sembunyikan dialog konfirmasi
   };
 
   return (
     <div className="p-6">
+      {/* Header Dashboard */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-white bg-gradient-to-r from-blue-900 to-blue-700 p-2 rounded-md shadow-md">
           Dashboard Management
         </h1>
         <div className="flex items-center space-x-4">
+          {/* Tombol navigasi untuk menambah anggota */}
           <button
             onClick={() => navigate("/data-karyawan")}
             className="bg-gradient-to-r from-blue-900 to-blue-700 text-white px-4 py-2 rounded-lg shadow-md transition transform hover:scale-105"
           >
             + Assign Member
           </button>
+          {/* Dropdown Profil */}
           <div className="relative">
             <button
               onClick={handleProfileClick}
@@ -78,7 +88,9 @@ function DashboardCard() {
         </div>
       </div>
 
+      {/* Konten utama dashboard */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        {/* Kartu Report dan Analysis */}
         <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white shadow-md rounded-lg p-4">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-bold">Report and Analysis</h2>
@@ -86,6 +98,7 @@ function DashboardCard() {
               Sort by this week
             </button>
           </div>
+          {/* Placeholder untuk grafik */}
           <div className="w-full h-64 bg-gray-100 flex items-center justify-center">
             <img
               src="https://quickchart.io/chart?c={type:'line',data:{labels:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],datasets:[{label:'Project A',data:[10,20,15,30,40,35,50],borderColor:'rgb(255, 99, 132)',fill:false},{label:'Project B',data:[20,30,25,35,45,40,55],borderColor:'rgb(54, 162, 235)',fill:false},{label:'Project C',data:[5,10,20,25,30,35,45],borderColor:'rgb(255, 205, 86)',fill:false}]}}"
@@ -94,26 +107,27 @@ function DashboardCard() {
             />
           </div>
           <div className="flex justify-around mt-4">
+            {/* Tombol navigasi ke berbagai proyek */}
             <button
-              onClick={() => navigate("/projek")}
+              onClick={() => navigate("/proyek/a")}
               className="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-lg transition transform hover:scale-105"
             >
               Project A
             </button>
             <button
-              onClick={() => navigate("/projek")}
+              onClick={() => navigate("/proyek/b")}
               className="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-lg transition transform hover:scale-105"
             >
               Project B
             </button>
             <button
-              onClick={() => navigate("/projek")}
+              onClick={() => navigate("/proyek/c")}
               className="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-lg transition transform hover:scale-105"
             >
               Project C
             </button>
             <button
-              onClick={() => navigate("/projek")}
+              onClick={() => navigate("/data-proyek")}
               className="bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition transform hover:scale-105"
             >
               Details
@@ -121,6 +135,7 @@ function DashboardCard() {
           </div>
         </div>
 
+        {/* Kartu Progress */}
         <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white shadow-md rounded-lg p-4">
           <h2 className="text-lg font-bold mb-4">Progress</h2>
           <div className="w-full h-64 bg-gray-100 flex items-center justify-center">
@@ -143,9 +158,11 @@ function DashboardCard() {
         </div>
       </div>
 
+      {/* Kartu Feedback */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white shadow-md rounded-lg p-4">
         <h2 className="text-xl font-bold mb-4">Feedback</h2>
 
+        {/* Komentar pelanggan */}
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center space-x-2">
             <img
@@ -167,6 +184,7 @@ function DashboardCard() {
           will definitely recommend it to others."
         </blockquote>
 
+        {/* Komentar lainnya */}
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center space-x-2">
             <img
@@ -188,6 +206,7 @@ function DashboardCard() {
           provided was exactly what I needed for my business."
         </blockquote>
 
+        {/* Komentar terakhir */}
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center space-x-2">
             <img
@@ -210,6 +229,7 @@ function DashboardCard() {
         </blockquote>
       </div>
 
+      {/* Dialog Konfirmasi Logout */}
       {showLogoutConfirmation && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
           <div className="bg-white p-6 rounded-md shadow-lg">
